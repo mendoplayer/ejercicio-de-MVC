@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "juan",
+    "price": "30000",
+    "offert": true,
+    "image": []
+  },
+  {
+    "id": 2,
+    "name": "juanma",
+    "price": 10000,
+    "offert": true,
+    "image": []
+  },
+  {
+    "id": 3,
+    "name": "fernando",
+    "price": 2000,
+    "offert": false,
+    "image": []
+  },
+  {
+    "id": 4,
+    "name": "alexis",
+    "price": 6000,
+    "offert": false,
+    "image": []
+  }
+]

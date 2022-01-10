@@ -1,0 +1,22 @@
+
+body {
+    background-color: rgb(118, 172, 243);
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    min-height: 80vh;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-content: start;
+}
+
+main h2 {
+    flex-basis: 100vw;
+    text-align: center;
+    margin: 1rem 0;
+}

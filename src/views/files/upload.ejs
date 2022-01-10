@@ -1,0 +1,16 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+        <form action="/files/" enctype= "multipart/form-data" method="post">
+            <label for="name">
+                <input type="file" name="file" id="file" multiple>
+            </label>
+            </fieldset>
+            <button type="submit"> Upload</button>
+        </form>
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>

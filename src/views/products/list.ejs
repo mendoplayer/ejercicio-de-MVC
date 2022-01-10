@@ -1,0 +1,42 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+        <% if (locals.products) { %> 
+            <% if (products.length > 0) { %>
+             <ul>
+                <% products.forEach(product => { %>
+                    <li class="product">
+                        <a href="/products/<%= product.id %> ">
+                            <% if (product.image) { %>
+                                <img src="/uploads/<%= product.image[0].url %>" alt=""> 
+                                <% } %>                 
+                            <span>
+                                <%= product.name %> 
+                            </span>
+                            <span>
+                                $<%= product.price %> 
+                            </span>
+                            <a href="/products/update/<%= product.id %>">
+                                <i class= "fas fa-pen"></i>
+                        </a>
+                        <form action="/products/?m=DELETE" method="post">
+                            <input type="hidden" name="id" value="<%= product.id %>">
+                            <button type="submit">
+                                <i class= "fas fa-times"></i>
+                            </button>
+                        </form>
+                    </li>
+                <% }) %>
+             </ul>
+            <% } else { %>
+                <h2> No hay producto</h2>
+            <% } %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+       <% } %>
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>

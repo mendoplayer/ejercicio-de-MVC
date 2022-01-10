@@ -1,0 +1,19 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+        <article>
+            <% if (product.offert) { %>
+            <span>
+                On Sale
+            </span>
+            <%  } %>
+            <span>
+                $<%= product.price %> 
+            </span>
+        </article>
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>

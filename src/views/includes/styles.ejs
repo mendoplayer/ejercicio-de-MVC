@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/css/components/header.css"> <!--Archivos que siempre se van a usar-->
+<link rel="stylesheet" href="/css/components/footer.css">
+
+<% if (locals.styles) { %> <!--Parte dinamica-->
+    <% styles.forEach(style => { %>
+        <link rel="stylesheet" href="/css/<%= style %>.css"
+   <% }) %>
+<% } %>

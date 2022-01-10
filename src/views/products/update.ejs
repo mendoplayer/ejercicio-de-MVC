@@ -1,0 +1,24 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+        <form action="/products/<%= product.id %>?m=PUT" method="POST">
+            <label for="name">
+                <input type="text" name="name" id="name" placeholder="Name" value="<%= product.name %>">
+            </label>
+            <label for="price">
+                <input type="number" name="price" id="price" placeholder="Price" min="0" value="<%= product.price %>">
+            </label>
+            <label for="offert">
+                <input type="checkbox" name="offert" id="offert"<%= product.offert ? 'checked' : null %> >
+                <i class="fas fa-percent"></i>
+            </label>
+            <fieldset>
+                <button type="submit">Update</button>
+            </fieldset>
+        </form>
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>

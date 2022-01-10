@@ -1,0 +1,27 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+        <form action="/products/" enctype="multipart/form-data" method="post">
+            <label for="name">
+                <input type="text" name="name" id="name" placeholder="Name">
+            </label>
+            <label for="price">
+                <input type="number" name="price" id="price" placeholder="Price" min="0">
+            </label>
+            <label for="offert">
+                <input type="checkbox" name="offert" id="offert">
+                <i class="fas fa-percent"></i>
+            </label>
+            <label for="file">
+                <input type="file" name="file" id="file" multiple>
+            </label>
+            <fieldset>
+                <button type="submit">Save</button>
+            </fieldset>
+        </form>
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>
